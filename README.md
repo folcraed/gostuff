@@ -1,2 +1,2 @@
 # gostuff
-My golang scripting playground and experiments.
+My golang playground and experiments.
