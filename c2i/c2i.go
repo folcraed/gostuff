@@ -6,10 +6,14 @@ import (
 	"strings"
 )
 
+// toCentimeters takes a value passed to it and
+// converts it to centimeters.
 func toCentimeters(inches float64) float64 {
 	return inches / 0.39370
 }
 
+// toInches takes a value passed to it and
+// converts it to inches.
 func toInches(centimeters float64) float64 {
 	return centimeters * 0.39370
 }

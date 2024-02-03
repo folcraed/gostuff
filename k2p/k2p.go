@@ -6,10 +6,12 @@ import (
 	"strings"
 )
 
+// toPounds takes input and converts ot to pounds.
 func toPounds(weight float64) float64 {
 	return weight * 2.2046
 }
 
+// toKilograms takes input and converts it to kilograms.
 func toKilograms(weight float64) float64 {
 	return weight / 2.2046
 }

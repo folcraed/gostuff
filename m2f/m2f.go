@@ -6,10 +6,12 @@ import (
 	"strings"
 )
 
+// toFeet takes input and converts it to feet.
 func toFeet(distance float64) float64 {
 	return distance * 3.2808
 }
 
+// toMeters takes input and converts it to meters.
 func toMeters(distance float64) float64 {
 	return distance * 0.3048
 }

@@ -6,10 +6,12 @@ import (
 	"strings"
 )
 
+// toKilometers takes input and converts it to kilometers.
 func toKilometers(miles float64) float64 {
 	return miles * 1.60934
 }
 
+// toMiles takes input and converts it to miles.
 func toMiles(kilometers float64) float64 {
 	return kilometers / 1.60934
 }
