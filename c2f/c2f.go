@@ -6,15 +6,19 @@ import (
 	"strings"
 )
 
-func toCelcius(fahrenheit float64) float64 {
+// toCelsius takes the supplied number and
+// converts it to celsius.
+func toCelsius(fahrenheit float64) float64 {
 	return (fahrenheit - 32) / 1.80
 }
 
-func toFahrenheit(celcius float64) float64 {
-	return celcius*(9/5) + 32
+// toFahrenheit takes the supplied number and
+// converts it to Fahrenheit.
+func toFahrenheit(celsius float64) float64 {
+	return celsius*(9/5) + 32
 }
 
-var message = "Enter \"32c\" to convert to fahrenheit, \"32f\" to convert to celcius."
+var message = "Enter \"32c\" to convert to fahrenheit, \"32f\" to convert to celsius."
 var converting string
 
 func main() {
@@ -35,7 +39,7 @@ func main() {
 	case "c":
 		fmt.Printf("That equals %.1f fahrenheit\n", toFahrenheit(convertMe))
 	case "f":
-		fmt.Printf("That equals %.1f celcius\n", toCelcius(convertMe))
+		fmt.Printf("That equals %.1f celsius\n", toCelsius(convertMe))
 	default:
 		fmt.Println("Something went wrong, check your input and try again!")
 	}
