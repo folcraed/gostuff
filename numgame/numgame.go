@@ -6,13 +6,14 @@ import (
 	"math/rand"
 )
 
+// Setup the starting defaults.
 var secretNum = rand.Intn(100)
 var guesses = 10
 var count = 0
 var guess = 0
 
 func main() {
-	fmt.Println("Welcome to the number guessing game! You have 10 tries to guess the number.")
+	fmt.Println("Welcome to the number guessing game!\nIt randomly picks a number between 1-100 for you to guess.\nYou have 10 tries to guess the number.\n")
 	for i := 1; i <= guesses; i++ {
 		fmt.Print("Enter your guess: ")
 		fmt.Scanf("%d", &guess)
