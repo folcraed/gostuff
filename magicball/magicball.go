@@ -35,11 +35,12 @@ var answers = [21]string{
 	"You seriously want me to answer?",
 }
 
-// This function gets the question from the user,
-// checking if they entered a string. If they did,
-// it returns control to main. It doesn't do anything
-// with the string, the string is actually not needed.
-// If they just pressed ENTER, it exits the program.
+/*
+This function gets the question from the user, checking if they entered a string. If they did,
+it returns control to main. It doesn't do anything with the string, the string is actually not needed.
+It just pauses the program so the user can enter something before a random answer is given.
+If they just pressed ENTER, it exits the program.
+*/
 func getQuestion() {
 	reader := bufio.NewReader(os.Stdin)
 	line, err := reader.ReadString('\n')
