@@ -47,14 +47,14 @@ func getQuestion() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	if line == "\n" {
+	if line == "\n" { // This will allow the user to exit
 		fmt.Println("The Magic 8-Ball has left!")
 		os.Exit(0)
 	}
 }
 
 func main() {
-	for i := 0; i < 1000; i++ { // Create a loop that should never be met.
+	for { // Create an endless loop that runs until user wants to exit
 		numAnswer := rand.Intn(21) // Randomly pick an answer.
 		fmt.Println("Ask the Magic 8-Ball a question, <ENTER> to exit.")
 		getQuestion() // Note the function doesn't take any parameters, nor returns any.
