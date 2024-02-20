@@ -4,20 +4,28 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 // Setup the starting defaults.
-var secretNum = rand.Intn(100)
-var guesses = 10
-var count = 0
-var guess = 0
+var guesses int = 10
+var count int = 0
+var guess int = 0
 
 func main() {
-	fmt.Println("Welcome to the number guessing game!\nIt randomly picks a number between 1-100 for you to guess.\nYou have 10 tries to guess the number.\n")
+	rand.NewSource(time.Now().UnixNano())
+	secretNum := rand.Intn(100)
+
+	fmt.Println("Welcome to the number guessing game!\nIt randomly picks a number between 1-100 for you to guess.\nYou have 10 tries to guess the number.")
+	fmt.Println()
 	for i := 1; i <= guesses; i++ {
 		fmt.Print("Enter your guess: ")
-		fmt.Scanf("%d", &guess)
-		count = count + 1
+		_, err := fmt.Scanf("%d", &guess)
+		if err != nil {
+			fmt.Println("Invalid guess: err:", err)
+			continue
+		}
+		count += 1
 		left := guesses - count
 		if i == 10 {
 			fmt.Printf("Sorry, you ran out of guesses. The number was %d\n", secretNum)
@@ -30,6 +38,5 @@ func main() {
 			fmt.Printf("Correct! The number was %d\n", secretNum)
 			break
 		}
-
 	}
 }
