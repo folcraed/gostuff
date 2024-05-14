@@ -15,7 +15,7 @@ func toCelsius(fahrenheit float64) float64 {
 // toFahrenheit takes the supplied number and
 // converts it to Fahrenheit.
 func toFahrenheit(celsius float64) float64 {
-	return celsius*(9/5) + 32
+	return (celsius*9)/5 + 32
 }
 
 var message = "Enter \"32c\" to convert to fahrenheit, \"32f\" to convert to celsius."
