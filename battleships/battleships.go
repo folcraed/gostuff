@@ -1,4 +1,4 @@
-// A file for experimenting with things
+// The game of Battleships
 
 package main
 
@@ -20,16 +20,19 @@ const SUNK = " X"
 const MISSED = " *"
 
 func sank() {
+	fmt.Println()
 	fmt.Println("You sank my battleship!")
 	SHIPS += 1
 }
 
 func missed() {
+	fmt.Println()
 	fmt.Println("Missed!")
 	count += 1
 }
 
 func displayBoard() {
+	fmt.Println()
 	fmt.Println("   A  B  C  D")
 	fmt.Printf("1 %s %s %s %s\n", empties[0], empties[3], empties[6], empties[9])
 	fmt.Printf("2 %s %s %s %s\n", empties[1], empties[4], empties[7], empties[10])
@@ -45,7 +48,8 @@ func getRandom() {
 }
 
 func getGuess() {
-	fmt.Print("Enter a guess: ")
+	fmt.Println()
+	fmt.Print("Enter a shot: ")
 	fmt.Scanln(&guess)
 }
 
@@ -60,7 +64,7 @@ func main() {
 		if SHIPS == 3 {
 			fmt.Println("You sunk ALL my battleships!")
 			displayBoard()
-			fmt.Printf("It took you %d tries.\n", count)
+			fmt.Printf("\nIt took you %d tries.\n", count)
 			break
 		}
 		displayBoard()
