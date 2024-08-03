@@ -56,7 +56,8 @@ func getQuestion() {
 func main() {
 	for { // Create an endless loop that runs until user wants to exit
 		numAnswer := rand.Intn(21) // Randomly pick an answer.
-		fmt.Println("Ask the Magic 8-Ball a question, <ENTER> to exit.")
+		fmt.Println()
+		fmt.Println("Ask the Magic 8-Ball a question, or just press <ENTER> to exit.")
 		getQuestion() // Note the function doesn't take any parameters, nor returns any.
 		theAnswer := answers[numAnswer]
 		fmt.Println(theAnswer)
